@@ -1,0 +1,82 @@
+{
+    "__class__": "qcodes.data.data_set.DataSet",
+    "arrays": {
+        "powersource_curr1_set": {
+            "__class__": "qcodes.data.data_array.DataArray",
+            "action_indices": [],
+            "array_id": "powersource_curr1_set",
+            "instrument": "qcodes.instrument_drivers.Keysight.B2962A.B2962A",
+            "instrument_name": "powersource",
+            "is_setpoint": true,
+            "label": "Current",
+            "name": "curr1",
+            "shape": [
+                51
+            ],
+            "unit": "A",
+            "vals": "<Numbers -0.01<=v<=100.0>"
+        },
+        "powersource_voltage2": {
+            "__class__": "qcodes.data.data_array.DataArray",
+            "action_indices": [
+                0
+            ],
+            "array_id": "powersource_voltage2",
+            "instrument": "qcodes.instrument_drivers.Keysight.B2962A.B2962A",
+            "instrument_name": "powersource",
+            "is_setpoint": false,
+            "label": "Voltage",
+            "name": "voltage2",
+            "shape": [
+                51
+            ],
+            "unit": "V",
+            "vals": "<Numbers -0.01<=v<=100.0>"
+        }
+    },
+    "formatter": "qcodes.data.gnuplot_format.GNUPlotFormat",
+    "io": "<DiskIO, base_location='/Users/davidwise/Google Drive/UCL/PhD_1/Server/Toptica/Hall Effect/Data'>",
+    "location": "Data/Current12Voltage34",
+    "loop": {
+        "__class__": "qcodes.loops.ActiveLoop",
+        "actions": [
+            {
+                "__class__": "qcodes.instrument.parameter.StandardParameter",
+                "instrument": "qcodes.instrument_drivers.Keysight.B2962A.B2962A",
+                "instrument_name": "powersource",
+                "label": "Voltage",
+                "name": "voltage2",
+                "ts": "2017-11-22 15:43:35",
+                "unit": "V",
+                "vals": "<Numbers -0.01<=v<=100.0>",
+                "value": 0.00061
+            }
+        ],
+        "delay": 1,
+        "sweep_values": {
+            "parameter": {
+                "__class__": "qcodes.instrument.parameter.StandardParameter",
+                "instrument": "qcodes.instrument_drivers.Keysight.B2962A.B2962A",
+                "instrument_name": "powersource",
+                "label": "Current",
+                "name": "curr1",
+                "ts": "2017-11-22 15:43:35",
+                "unit": "A",
+                "vals": "<Numbers -0.01<=v<=100.0>",
+                "value": 6.400000000000001e-06
+            },
+            "values": [
+                {
+                    "first": -1e-05,
+                    "last": 1e-05,
+                    "num": 51,
+                    "type": "linear"
+                }
+            ]
+        },
+        "then_actions": [],
+        "ts_end": "2017-11-22 15:44:41",
+        "ts_start": "2017-11-22 15:43:49",
+        "use_threads": false
+    }
+}
